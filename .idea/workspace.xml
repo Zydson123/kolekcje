@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c19a72f-5813-47a2-8afc-9dfa9efd3297" name="Changes" comment="trafianie poprawka">
+    <list default="true" id="5c19a72f-5813-47a2-8afc-9dfa9efd3297" name="Changes" comment="funkcje z returnem">
+      <change afterPath="$PROJECT_DIR$/src/com/Klasa3p/gra/gra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Klasa3p/gra/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FormatOnSaveOptions">
     <option name="myRunOnSave" value="true" />
@@ -98,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663226997460</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="funkcje z returnem">
+      <created>1663229589472</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663229589472</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +136,7 @@
     <MESSAGE value="wpisywanie" />
     <MESSAGE value="trafianie" />
     <MESSAGE value="trafianie poprawka" />
-    <option name="LAST_COMMIT_MESSAGE" value="trafianie poprawka" />
+    <MESSAGE value="funkcje z returnem" />
+    <option name="LAST_COMMIT_MESSAGE" value="funkcje z returnem" />
   </component>
 </project>
