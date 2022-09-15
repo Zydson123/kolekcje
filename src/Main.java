@@ -4,7 +4,7 @@ public class Main {
     public static void losuj(int n, Set<Integer> tab) {
         //losowanie bez powtórzeń
         while (tab.size() < n) {
-            tab.add((int) (Math.random() * 100 + 1));
+            tab.add((int) (Math.random() * 10 + 1));
         }
     }
 
@@ -32,6 +32,14 @@ public class Main {
         System.out.println(li);
     }
 
+    public static void trafianie(List<Integer> traf, Set<Integer> wyl) {
+        for (Integer Wartosc : wyl) {
+            if (wyl.contains(Wartosc)) {
+                traf.add(Wartosc);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         //losowanie 6 liczb, zapiszemy je w tablicy potem w kolekcji
         //wpisywanie 6 liczb
@@ -49,5 +57,9 @@ public class Main {
         //aktywacja funkcji wpisania do zbioru
         List<Integer> wpisane = new ArrayList<>();
         skaner(6, wpisane);
+        //sprawdzamy które wartości zostąły wylosowane
+        List<Integer> trafione = new LinkedList<>();
+        trafianie(trafione, wylosowane);
+        //jeżeli wartość wpisana została wylosowana to dodajemy ją do listy "trafione"
     }
 }
