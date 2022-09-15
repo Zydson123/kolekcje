@@ -1,9 +1,8 @@
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void losuj(int n, Set<Integer> tab) {
+        //losowanie bez powtórzeń
         while (tab.size() < n) {
             tab.add((int) (Math.random() * 100 + 1));
         }
@@ -17,20 +16,38 @@ public class Main {
         }
     }
 
+    public static void skaner(int n, List<Integer> li) {
+        Scanner klawiatura = new Scanner(System.in);
+        System.out.println("Podaj 6 liczb");
+        //Lista to kolekcja w której można zmienić rozmiar w trakcie działania programu
+        //elementy indeksowania mogą się powtarzać
+        while (li.size() < n) {
+            int liczba = klawiatura.nextInt();
+            while (li.contains(liczba)) {
+                System.out.println("Już taką liczbę wpisałeś, wpisz inną");
+                liczba = klawiatura.nextInt();
+            }
+            li.add(liczba);
+        }
+        System.out.println(li);
+    }
+
     public static void main(String[] args) {
         //losowanie 6 liczb, zapiszemy je w tablicy potem w kolekcji
         //wpisywanie 6 liczb
         //sprawdzenie ile trafionych
         System.out.println("losowanie 6 liczb");
-        //losowanie bez powtórzeń
         //kolekcja = talice na sterydach
         //kolekcje mogą mieć tylko typy złożone
         //można dowolnie zmieniać rozmiar po zadeklarowaniu
         //po zadeklarowaniu można usuwać i dodawać elementy
         Set<Integer> wylosowane = new HashSet<>();
+        //aktywowanie funkcji losowania
         losuj(6, wylosowane);
+        //aktywowanie funkcji wypisania zbioru
         wypisz(wylosowane);
-        //zbiór zazwyczaj zawiera elementy bez powtórzeń
-        //zbiór zazwyczaj nie ma indeksowania elementów
+        //aktywacja funkcji wpisania do zbioru
+        List<Integer> wpisane = new ArrayList<>();
+        skaner(6, wpisane);
     }
 }
