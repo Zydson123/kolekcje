@@ -1,22 +1,25 @@
 import java.util.*;
 
 public class Main {
-    public static void losuj(int n, Set<Integer> tab) {
+    public static Set<Integer> losuj(int n) {
         //losowanie bez powtórzeń
-        while (tab.size() < n) {
-            tab.add((int) (Math.random() * 10 + 1));
+        Set<Integer> wylosowane = new HashSet<>();
+        while (wylosowane.size() < n) {
+            wylosowane.add((int) (Math.random() * 10 + 1));
         }
+        return wylosowane;
     }
 
     public static void wypisz(Set<Integer> tab) {
         int ktory = 0;
         for (int element : tab) {
             ktory += 1;
-            System.out.println("Licza " + ktory + ": " + element + " ");
+            System.out.println("Liczba " + ktory + ": " + element + " ");
         }
     }
 
-    public static void skaner(int n, List<Integer> li) {
+    public static List<Integer> skaner(int n) {
+        List<Integer> li = new ArrayList<>();
         Scanner klawiatura = new Scanner(System.in);
         System.out.println("Podaj 6 liczb");
         //Lista to kolekcja w której można zmienić rozmiar w trakcie działania programu
@@ -29,39 +32,33 @@ public class Main {
             }
             li.add(liczba);
         }
-        System.out.println(li);
+        return li;
     }
 
-    public static void trafianie(List<Integer> traf, Set<Integer> wyl) {
+    public static List<Integer> trafianie(Set<Integer> wyl) {
+        List<Integer> traf = new LinkedList<>();
         for (Integer Wartosc : wyl) {
             if (wyl.contains(Wartosc)) {
                 traf.add(Wartosc);
             }
         }
-        System.out.println("Twoję trafy to: ");
-        System.out.println(traf);
+        return traf;
     }
 
     public static void main(String[] args) {
-        //losowanie 6 liczb, zapiszemy je w tablicy potem w kolekcji
-        //wpisywanie 6 liczb
-        //sprawdzenie ile trafionych
         System.out.println("losowanie 6 liczb");
-        //kolekcja = talice na sterydach
-        //kolekcje mogą mieć tylko typy złożone
-        //można dowolnie zmieniać rozmiar po zadeklarowaniu
-        //po zadeklarowaniu można usuwać i dodawać elementy
-        Set<Integer> wylosowane = new HashSet<>();
         //aktywowanie funkcji losowania
-        losuj(6, wylosowane);
+        Set<Integer> wylosowane = losuj(6);
         //aktywowanie funkcji wypisania zbioru
         wypisz(wylosowane);
         //aktywacja funkcji wpisania do zbioru
-        List<Integer> wpisane = new ArrayList<>();
-        skaner(6, wpisane);
+        List<Integer> wpisane = skaner(6);
+        System.out.println("Twoję trafy to");
+        System.out.println(wpisane);
         //sprawdzamy które wartości zostąły wylosowane
-        List<Integer> trafione = new LinkedList<>();
-        trafianie(trafione, wylosowane);
         //jeżeli wartość wpisana została wylosowana to dodajemy ją do listy "trafione"
+        List<Integer> trafione = trafianie(wylosowane);
+        System.out.println("Wylosowane liczby to: ");
+        System.out.println(trafione);
     }
 }
