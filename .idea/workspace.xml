@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c19a72f-5813-47a2-8afc-9dfa9efd3297" name="Changes" comment="voidy w osobnej klasie">
-      <change afterPath="$PROJECT_DIR$/src/com/Klasa3p/gra/gra.java" afterDir="false" />
+    <list default="true" id="5c19a72f-5813-47a2-8afc-9dfa9efd3297" name="Changes" comment="voidy w osobnej wszystko zhermetyzowane">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Klasa3p/gra/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Klasa3p/gra/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Klasa3p/gra/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Klasa3p/gra/gra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Klasa3p/gra/gra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663231824279</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="voidy w osobnej wszystko zhermetyzowane">
+      <created>1663232112496</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663232112496</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +152,7 @@
     <MESSAGE value="trafianie poprawka" />
     <MESSAGE value="funkcje z returnem" />
     <MESSAGE value="voidy w osobnej klasie" />
-    <option name="LAST_COMMIT_MESSAGE" value="voidy w osobnej klasie" />
+    <MESSAGE value="voidy w osobnej wszystko zhermetyzowane" />
+    <option name="LAST_COMMIT_MESSAGE" value="voidy w osobnej wszystko zhermetyzowane" />
   </component>
 </project>

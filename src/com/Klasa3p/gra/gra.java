@@ -9,7 +9,6 @@ public class gra {
     brak - dostępne wszędzie w pakiecie
     private - dostępne tylko w klasie
     protected - dostępne w klasie i klasach potomnych oraz w pakiecie
-
     używanie private to hermetyzacja (zamknięcie zmiennych w ramie klasy)
      */
     private static Set<Integer> wylosowaneliczby = new HashSet<>();
@@ -17,7 +16,7 @@ public class gra {
 
     private static List<Integer> trafy = new LinkedList<>();
 
-    private void losu(int n) {
+    private static void losu(int n) {
         while (wylosowaneliczby.size() < n) {
             wylosowaneliczby.add((int) (Math.random() * 100 + 1));
         }
@@ -55,6 +54,7 @@ public class gra {
         System.out.println("Wylosowano:" + wylosowaneliczby);
         System.out.println("Wpisano:" + liczby);
         System.out.println("Trafiono" + trafy);
+        liczby.clear();
     }
 
 }
