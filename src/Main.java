@@ -38,6 +38,8 @@ public class Main {
                 traf.add(Wartosc);
             }
         }
+        System.out.println("Twoję trafy to: ");
+        System.out.println(traf);
     }
 
     public static void main(String[] args) {
