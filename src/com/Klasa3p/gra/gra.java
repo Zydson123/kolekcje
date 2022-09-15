@@ -13,18 +13,17 @@ public class gra {
     używanie private to hermetyzacja (zamknięcie zmiennych w ramie klasy)
      */
     private static Set<Integer> wylosowaneliczby = new HashSet<>();
-    List<Integer> liczby = new ArrayList<>();
+    private List<Integer> liczby = new ArrayList<>();
 
     private static List<Integer> trafy = new LinkedList<>();
 
-    public void losu(int n) {
+    private void losu(int n) {
         while (wylosowaneliczby.size() < n) {
-            wylosowaneliczby.add((int) (Math.random() * 10 + 1));
+            wylosowaneliczby.add((int) (Math.random() * 100 + 1));
         }
     }
 
-    public void wpisane(int n) {
-        System.out.println(wylosowaneliczby);
+    private void wpisane(int n) {
         Scanner klawiatura = new Scanner(System.in);
         System.out.println("Podaj " + n + " liczb");
         //Lista to kolekcja w której można zmienić rozmiar w trakcie działania programu
@@ -39,14 +38,23 @@ public class gra {
         }
     }
 
-    public static void trafianie(List<Integer> traf) {
-        for (Integer Wartosc : traf) {
+    private void trafianie() {
+        for (Integer Wartosc : liczby) {
             if (wylosowaneliczby.contains(Wartosc)) {
                 trafy.add(Wartosc);
             }
         }
         System.out.println("Liczby które trafiłeś to:");
         System.out.println(trafy);
+    }
+
+    public void zagraj(int liczbaWpisanych) {
+        losu(6);
+        wpisane(liczbaWpisanych);
+        trafianie();
+        System.out.println("Wylosowano:" + wylosowaneliczby);
+        System.out.println("Wpisano:" + liczby);
+        System.out.println("Trafiono" + trafy);
     }
 
 }
